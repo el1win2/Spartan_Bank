@@ -142,6 +142,83 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // 출금하기
+    public void Withdraw10K()
+    {
+        int cashtxt = int.Parse(CashTxt.text);
+        int banlancetxt = int.Parse(BanlanceTxt.text);
 
+        if (banlancetxt >= 10000)
+        {
+            cashtxt += 10000;
+            banlancetxt -= 10000;
+            CashTxt.text = cashtxt.ToString();
+            BanlanceTxt.text = banlancetxt.ToString();
+        }
+        else
+        {
+            Invoke("OpenNotBanlance", 0.0f);
+            Invoke("CloseNotBanlance", 1.5f);
+        }
+    }
 
+    public void Withdraw30K()
+    {
+        int cashtxt = int.Parse(CashTxt.text);
+        int banlancetxt = int.Parse(BanlanceTxt.text);
+
+        if (banlancetxt >= 30000)
+        {
+            cashtxt += 30000;
+            banlancetxt -= 30000;
+            CashTxt.text = cashtxt.ToString();
+            BanlanceTxt.text = banlancetxt.ToString();
+        }
+        else
+        {
+            Invoke("OpenNotBanlance", 0.0f);
+            Invoke("CloseNotBanlance", 1.5f);
+        }
+    }
+
+    public void Withdraw50K()
+    {
+        int cashtxt = int.Parse(CashTxt.text);
+        int banlancetxt = int.Parse(BanlanceTxt.text);
+
+        if (banlancetxt >= 50000)
+        {
+            cashtxt += 50000;
+            banlancetxt -= 50000;
+            CashTxt.text = cashtxt.ToString();
+            BanlanceTxt.text = banlancetxt.ToString();
+        }
+        else
+        {
+            Invoke("OpenNotBanlance", 0.0f);
+            Invoke("CloseNotBanlance", 1.5f);
+        }
+    }
+
+    public void WithdrawInput()
+    {
+        int cashtxt = int.Parse(CashTxt.text);
+        int banlancetxt = int.Parse(BanlanceTxt.text);
+        bool b = int.TryParse(withdrawInput.text, out int InputValue);
+
+        if (!b) InputValue = 0;
+
+        if (banlancetxt >= InputValue)
+        {
+            cashtxt += InputValue;
+            banlancetxt -= InputValue;
+            CashTxt.text = cashtxt.ToString();
+            BanlanceTxt.text = banlancetxt.ToString();
+        }
+        else
+        {
+            Invoke("OpenNotBanlance", 0.0f);
+            Invoke("CloseNotBanlance", 1.5f);
+        }
+    }
 }

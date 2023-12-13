@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD604\uAE08\uC774 \uBAA8\uC790\uB78D\uB2C8\uB2E4!"
+  m_Text: "\uC794\uC561\uC774 \uBAA8\uC790\uB78D\uB2C8\uB2E4!"
 --- !u!222 &61392109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -523,7 +523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 192619592}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137950753}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Withdraw50K
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192619592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2061,7 +2073,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 763746596}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137950753}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: WithdrawInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &763746596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,7 +2287,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 773134599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137950753}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Withdraw30K
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &773134599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3540,7 +3576,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384306086}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137950753}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Withdraw10K
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384306086
 MonoBehaviour:
   m_ObjectHideFlags: 0
