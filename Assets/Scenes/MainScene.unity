@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 61392109}
   - component: {fileID: 61392108}
   m_Layer: 5
-  m_Name: NotBanlanceTxt
+  m_Name: NotBalanceTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 61779487}
   - component: {fileID: 61779486}
   m_Layer: 5
-  m_Name: NotBanlance
+  m_Name: NotBalance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 272509588}
   - component: {fileID: 272509587}
   m_Layer: 5
-  m_Name: Banlance
+  m_Name: Balance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Banlance
+  m_Text: Balance
 --- !u!222 &272509588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 315959831}
   - component: {fileID: 315959830}
   m_Layer: 5
-  m_Name: BanlanceNumber
+  m_Name: BalanceNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4752,9 +4752,9 @@ MonoBehaviour:
   PayDeposit: {fileID: 778195963}
   PayWithdraw: {fileID: 1564078581}
   notMoney: {fileID: 1111034744}
-  notBanlance: {fileID: 61779484}
+  notbalance: {fileID: 0}
   CashTxt: {fileID: 1965198334}
-  BanlanceTxt: {fileID: 315959830}
+  balanceTxt: {fileID: 0}
   depositInput: {fileID: 1279649561}
   withdrawInput: {fileID: 1643889106}
 --- !u!4 &2137950754

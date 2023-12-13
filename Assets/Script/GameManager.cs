@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject PayDeposit; // 입금 패널
     public GameObject PayWithdraw; // 출금 패널
     public GameObject notMoney; // 현금 부족 패널
-    public GameObject notBanlance; // 잔액 부족 패널
+    public GameObject notbalance; // 잔액 부족 패널
     public Text CashTxt; // 현금
-    public Text BanlanceTxt; // 통장 잔액
+    public Text balanceTxt; // 통장 잔액
     public Text depositInput; // 입금 입력값
     public Text withdrawInput; // 출금 입력값
 
@@ -43,15 +43,15 @@ public class GameManager : MonoBehaviour
     }
 
     // 잔액 부족 열고 닫기
-    public void OpenNotBanlance()
+    public void OpenNotbalance()
     {
-        notBanlance.SetActive(true);
+        notbalance.SetActive(true);
 
     }
 
-    public void CloseNotBanlance()
+    public void CloseNotbalance()
     {
-        notBanlance.SetActive(false);
+        notbalance.SetActive(false);
 
     }
 
@@ -67,14 +67,14 @@ public class GameManager : MonoBehaviour
     public void Deposit10K()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
 
         if(cashtxt >= 10000)
         {
             cashtxt -= 10000;
-            banlancetxt += 10000;
+            balancetxt += 10000;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         } else
         {
             Invoke("OpenNotMoney", 0.0f);
@@ -85,14 +85,14 @@ public class GameManager : MonoBehaviour
     public void Deposit30K()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
 
         if (cashtxt >= 30000)
         {
             cashtxt -= 30000;
-            banlancetxt += 30000;
+            balancetxt += 30000;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
@@ -104,14 +104,14 @@ public class GameManager : MonoBehaviour
     public void Deposit50K()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
 
         if (cashtxt >= 50000)
         {
             cashtxt -= 50000;
-            banlancetxt += 50000;
+            balancetxt += 50000;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
     public void DepositInput()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
         bool b = int.TryParse(depositInput.text, out int InputValue);
 
         if(!b) InputValue = 0;
@@ -131,9 +131,9 @@ public class GameManager : MonoBehaviour
         if (cashtxt >= InputValue)
         {
             cashtxt -= InputValue;
-            banlancetxt += InputValue;
+            balancetxt += InputValue;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
@@ -146,79 +146,79 @@ public class GameManager : MonoBehaviour
     public void Withdraw10K()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
 
-        if (banlancetxt >= 10000)
+        if (balancetxt >= 10000)
         {
             cashtxt += 10000;
-            banlancetxt -= 10000;
+            balancetxt -= 10000;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
-            Invoke("OpenNotBanlance", 0.0f);
-            Invoke("CloseNotBanlance", 1.5f);
+            Invoke("OpenNotbalance", 0.0f);
+            Invoke("CloseNotbalance", 1.5f);
         }
     }
 
     public void Withdraw30K()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
 
-        if (banlancetxt >= 30000)
+        if (balancetxt >= 30000)
         {
             cashtxt += 30000;
-            banlancetxt -= 30000;
+            balancetxt -= 30000;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
-            Invoke("OpenNotBanlance", 0.0f);
-            Invoke("CloseNotBanlance", 1.5f);
+            Invoke("OpenNotbalance", 0.0f);
+            Invoke("CloseNotbalance", 1.5f);
         }
     }
 
     public void Withdraw50K()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
 
-        if (banlancetxt >= 50000)
+        if (balancetxt >= 50000)
         {
             cashtxt += 50000;
-            banlancetxt -= 50000;
+            balancetxt -= 50000;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
-            Invoke("OpenNotBanlance", 0.0f);
-            Invoke("CloseNotBanlance", 1.5f);
+            Invoke("OpenNotbalance", 0.0f);
+            Invoke("CloseNotbalance", 1.5f);
         }
     }
 
     public void WithdrawInput()
     {
         int cashtxt = int.Parse(CashTxt.text);
-        int banlancetxt = int.Parse(BanlanceTxt.text);
+        int balancetxt = int.Parse(balanceTxt.text);
         bool b = int.TryParse(withdrawInput.text, out int InputValue);
 
         if (!b) InputValue = 0;
 
-        if (banlancetxt >= InputValue)
+        if (balancetxt >= InputValue)
         {
             cashtxt += InputValue;
-            banlancetxt -= InputValue;
+            balancetxt -= InputValue;
             CashTxt.text = cashtxt.ToString();
-            BanlanceTxt.text = banlancetxt.ToString();
+            balanceTxt.text = balancetxt.ToString();
         }
         else
         {
-            Invoke("OpenNotBanlance", 0.0f);
-            Invoke("CloseNotBanlance", 1.5f);
+            Invoke("OpenNotbalance", 0.0f);
+            Invoke("CloseNotbalance", 1.5f);
         }
     }
 }
