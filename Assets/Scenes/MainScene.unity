@@ -4752,9 +4752,9 @@ MonoBehaviour:
   PayDeposit: {fileID: 778195963}
   PayWithdraw: {fileID: 1564078581}
   notMoney: {fileID: 1111034744}
-  notbalance: {fileID: 0}
+  notbalance: {fileID: 61779484}
   CashTxt: {fileID: 1965198334}
-  balanceTxt: {fileID: 0}
+  balanceTxt: {fileID: 315959830}
   depositInput: {fileID: 1279649561}
   withdrawInput: {fileID: 1643889106}
 --- !u!4 &2137950754
